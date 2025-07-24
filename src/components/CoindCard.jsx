@@ -1,4 +1,4 @@
-const CoinCards = () => {
+const CoinCards = ({ coins }) => {
   return (
     <main className='grid'>
       {coins.map((coin) => {
