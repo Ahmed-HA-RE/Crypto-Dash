@@ -1,6 +1,6 @@
 const CoinCards = ({ coin }) => {
   return (
-    <div key={coin.id} className='coin-card'>
+    <div className='coin-card'>
       <div className='coin-header'>
         <img className='coin-image' src={coin.image} alt={coin.name} />
         <div>
@@ -16,7 +16,7 @@ const CoinCards = ({ coin }) => {
       >
         {coin.price_change_percentage_24h.toFixed(2)} %
       </p>
-      <p>Market Cap: {coin.market_cap.toLocaleString()} </p>
+      <p>Market Cap: ${coin.market_cap.toLocaleString()} </p>
     </div>
   );
 };
