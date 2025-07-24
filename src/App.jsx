@@ -34,7 +34,15 @@ const App = () => {
       <h1>🚀 Crypto Dash</h1>
       {loading && <p>Loading...</p>}
       {error && <div className='error'>{error}</div>}
-      {!loading || !error ? <CoinCards coins={coins} /> : 'null'}
+      {!loading || !error ? (
+        <main className='grid'>
+          {coins.map((coin) => {
+            return <CoinCards coin={coin} />;
+          })}
+        </main>
+      ) : (
+        'null'
+      )}
     </div>
   );
 };
