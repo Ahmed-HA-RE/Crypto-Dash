@@ -227,6 +227,14 @@ a {
   text-decoration: underline;
 }
 
+.coin-details-links span::after {
+  content: ', ';
+}
+
+.coin-details-links span:last-of-type::after {
+  content: '';
+}
+
 /* Modal */
 .modal-overlay {
   position: fixed;
