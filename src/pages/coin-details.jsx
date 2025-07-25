@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router';
+import Spinner from '../components/Spinner';
 import axios from 'axios';
 const API_URL = import.meta.env.VITE_COIN_API_URL;
 
@@ -36,7 +37,7 @@ const CoinDetails = () => {
       <h1 className='coin-details-title'>
         {coin ? `${coin.name} (${coin.symbol})` : 'Coin'}
       </h1>
-      {loading && <p>Loading...</p>}
+      {loading && <Spinner color='red' />}
       {error && <p>❌ {error}</p>}
 
       {!loading && !error && (

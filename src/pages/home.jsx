@@ -2,6 +2,7 @@ import FilterInput from '../components/FilterInput';
 import LimitSelector from '../components/LimitSelector';
 import SortSelector from '../components/SortSelector';
 import CoinCards from '../components/CoindCard';
+import Spinner from '../components/Spinner';
 
 const HomePage = ({
   coins,
@@ -42,7 +43,7 @@ const HomePage = ({
   return (
     <div>
       <h1>🚀 Crypto Dash</h1>
-      {loading && <p>Loading...</p>}
+      {loading && <Spinner color='#fff' />}
       {error && <div className='error'>{error}</div>}
 
       <div className='top-controls'>
@@ -51,7 +52,7 @@ const HomePage = ({
         <SortSelector sort={sort} onChange={setSort} />
       </div>
 
-      {!loading || !error ? (
+      {!loading && !error ? (
         <main className='grid'>
           {filteredCoins.length === 0 ? (
             <p>No Results Found</p>
@@ -61,9 +62,7 @@ const HomePage = ({
             })
           )}
         </main>
-      ) : (
-        'null'
-      )}
+      ) : null}
     </div>
   );
 };
