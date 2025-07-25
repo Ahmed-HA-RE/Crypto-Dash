@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import HomePage from './pages/home';
+import AboutPage from './pages/about';
 import { Route, Routes } from 'react-router';
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -52,6 +53,7 @@ const App = () => {
           />
         }
       />
+      <Route path='/about' element={<AboutPage />} />
     </Routes>
   );
 };
