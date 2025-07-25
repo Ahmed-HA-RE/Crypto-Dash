@@ -253,6 +253,28 @@ a {
   animation: slideUp 0.3s ease;
 }
 
+.not-found-container {
+  text-align: center;
+  padding: 80px 20px;
+  color: #fff;
+}
+
+.not-found-container .title {
+  font-size: 72px;
+  margin: 0 0 20px;
+}
+
+.not-found-container .message {
+  font-size: 18px;
+  margin: 0 0 30px;
+}
+
+.not-found-container .link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

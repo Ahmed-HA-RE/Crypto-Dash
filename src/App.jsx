@@ -3,6 +3,7 @@ import axios from 'axios';
 import HomePage from './pages/home';
 import AboutPage from './pages/about';
 import Header from './components/Header';
+import NotFoundPage from './pages/not-found';
 import { Route, Routes } from 'react-router';
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -39,7 +40,6 @@ const App = () => {
   return (
     <>
       <Header />
-
       <Routes>
         <Route
           path='/'
@@ -58,6 +58,7 @@ const App = () => {
           }
         />
         <Route path='/about' element={<AboutPage />} />
+        <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </>
   );
