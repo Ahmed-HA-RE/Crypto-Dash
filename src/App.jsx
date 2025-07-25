@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import HomePage from './pages/home';
 import AboutPage from './pages/about';
+import Header from './components/Header';
 import { Route, Routes } from 'react-router';
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -36,25 +37,29 @@ const App = () => {
   }, [limit]);
 
   return (
-    <Routes>
-      <Route
-        path='/'
-        element={
-          <HomePage
-            coins={coins}
-            filter={filter}
-            setFilter={setFilter}
-            sort={sort}
-            setSort={setSort}
-            limit={limit}
-            setLimit={setLimit}
-            error={error}
-            loading={loading}
-          />
-        }
-      />
-      <Route path='/about' element={<AboutPage />} />
-    </Routes>
+    <>
+      <Header />
+
+      <Routes>
+        <Route
+          path='/'
+          element={
+            <HomePage
+              coins={coins}
+              filter={filter}
+              setFilter={setFilter}
+              sort={sort}
+              setSort={setSort}
+              limit={limit}
+              setLimit={setLimit}
+              error={error}
+              loading={loading}
+            />
+          }
+        />
+        <Route path='/about' element={<AboutPage />} />
+      </Routes>
+    </>
   );
 };
 
