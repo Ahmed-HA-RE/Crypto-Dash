@@ -1,12 +1,45 @@
-# React + Vite
+# 🚀 CryptoTracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React app that displays real-time cryptocurrency market data, prices, and charts using the CoinGecko API v3.0.1. This app features sorting, filtering, dynamic routing, and chart visualizations built with React.js, Chart.js and Tailwind CSS.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🖇️ Live :
 
-## Expanding the ESLint configuration
+[https://crypto.ahmedrehandev.net](https://crypto.ahmedrehandev.net)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+### 📸 Screenshot :
+
+![preview](./public/main-page.jpg)
+
+---
+
+### 🛠️ Tech Stack :
+
+- Framework: React
+- Styling: Tailwind CSS
+- Charting: Chart.js
+- Routing: React Router
+- API: CoinGecko Market Chart Range API
+- State Management: useState, useEffect
+
+---
+
+### 📦 Features :
+
+- Fetches live market data and coin info
+- Displays coin symbol, name, market cap, and price
+- Interactive chart for price history
+- Filter and sort functionality
+- Responsive and mobile-friendly UI
+- Custom 404 Page
+- SPA Navigation with React Router
+
+---
+
+### 📄 License :
+
+This project is licensed under the MIT License.
+Feel free to use, modify, and distribute it.
