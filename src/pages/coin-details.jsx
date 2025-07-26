@@ -35,7 +35,7 @@ const CoinDetails = () => {
       <Link to={'/'}>← Go Back Home</Link>
 
       <h1 className='coin-details-title'>
-        {coin ? `${coin.name} (${coin.symbol})` : 'Coin'}
+        {coin ? `${coin.name} (${coin.symbol.toUpperCase()})` : 'Coin'}
       </h1>
       {loading && <Spinner color='red' />}
       {error && <p>❌ {error}</p>}
