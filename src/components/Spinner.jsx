@@ -2,7 +2,7 @@ import { BarLoader } from 'react-spinners';
 
 const override = {
   display: 'block',
-  margin: '10px auto 40px',
+  margin: '20px auto 40px',
   width: '35%',
 };
 

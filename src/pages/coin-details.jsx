@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router';
 import Spinner from '../components/Spinner';
+import CoinChart from '../components/CoinChart';
 import axios from 'axios';
 const API_URL = import.meta.env.VITE_COIN_API_URL;
 
@@ -50,7 +51,7 @@ const CoinDetails = () => {
 
           <p>{coin.description.en.split('\n')[0]}</p>
 
-          <div className='coin-details-info'>
+          <div className='coin-details-info font-bold'>
             <h3>Rank: #{coin.market_cap_rank}</h3>
             <h3>
               Current Price: AED{' '}
@@ -87,10 +88,12 @@ const CoinDetails = () => {
               All-Time Low: AED {coin.market_data.atl.aed.toLocaleString()} on{' '}
               {new Date(coin.market_data.atl_date.aed).toLocaleDateString()}
             </h4>
-            <h4>
+            <h4 className='mb-5'>
               Last Updated: {new Date(coin.last_updated).toLocaleDateString()}
             </h4>
           </div>
+
+          <CoinChart id={coin.id} />
 
           <div className='coin-details-links'>
             {coin.links.homepage[0] && (
